@@ -23,12 +23,12 @@ body {
 .right{
 	text-align: right;
 	font-size:125%;
-	color: brown;
+	color: orange;
 }
 .left {
   text-indent: 250px;
 	font-size:125%;
-	color: brown;
+	color: orange;
 }
 table {
   border-collapse: collapse;
