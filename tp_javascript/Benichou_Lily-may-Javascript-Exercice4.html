@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="add.css">
+<head>
+    <title>Exercice '</title>
+</head>
+
+<h1>Exercices 4</h1>
+<a href="exercicesjavascriptbenichou.html">Retour au menu</a>
+</html>
+
+
+<script>
+var number=Math.floor((Math.random() * 100) + 1), numberx;
+numberx=prompt('Choisi un nombre antre 1 et 100')
+
+while (numberx!=number){
+    if (numberx<number){
+        numberx=prompt('Faux, cherche plus grand')
+    }else if(numberx>number){
+        numberx=prompt('Faux, cherche plus petit')
+    }    
+}
+alert('Bien joué, c\'était bien'+ ' '+number)
+</script>

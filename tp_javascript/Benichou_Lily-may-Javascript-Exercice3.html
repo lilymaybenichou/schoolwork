@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="add.css">
+<head>
+    <title>Exercice 3</title>
+</head>
+
+<h1>Exercices 3</h1>
+<a href="exercicesjavascriptbenichou.html">Retour au menu</a>
+</html>
+
+<script>
+var AB, AC, BC;
+AB=prompt('entrer une valeur de AB');
+AC=prompt('entrer une valeur de AC');
+BC=prompt('entrer une valeur de BC');
+
+if (BC==Math.sqrt(AB**2+AC**2))
+{
+    alert('Le triangle ABC est rectangle en A')
+}else if (AC==Math.sqrt(BC**2+AB**2))
+{
+    alert('Le triangle ABC est rectangle en B')
+}else if (AB==Math.sqrt(BC**2+AC**2))
+{
+    alert('Le triangle ABC est rectangle en C')
+}else{
+    alert('le triangle n\'est pas rectangle')
+}
+
+
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link type="text/css" rel="stylesheet" href="add.css">
+<meta charset="utf-8">
+<head>
+    <title>Exercice 6</title>
+</head>
+<body>
+
+<h1> Quizz </h1>
+<a href="exercicesjavascriptbenichou.html">Retour au menu</a>
+
+<h2>Premiere question : </h2>
+
+<p>Léonard de Vinci était, en plus de ses nombreuses autres activités, un botaniste et un urbaniste.</p>
+    <input type ="button" value="Vraie" onclick="vrai()" id="btnV" />
+    <input type ="button" value="Faux" onclick="faux()" id="btnF"/>
+<p id="demo"> </p>
+
+
+
+
+<h2>Deuxieme question : </h2>
+
+<p>Le mouvement le plus vu dans les oeuvres connus de Picasso est : 
+<select id="choix" name="q" onchange="choix()" >
+    <option value="ch"> Fait ton choix : </option>
+    <option value="fr"> le pointillisme </option>
+    <option value="zh"> le cubisme </option>
+    <option value="it"> le réalisme </option>
+    </select>
+    
+<div id="selectResult"></div>
+</p>
+<h2>Troisiéme question : </h2>
+
+<p> Le mouvement illustré dans le tableau suivant est le:</br>
+    <img id="img2" src="th (7).jpg" width="150" height="200">
+<FORM>
+    <input type="text" name="Valeur_Reponse" id="Id_Rep" value="" />
+    <input type="button" value="Valider" id="Valider" onclick="vf();" />
+ </FORM>
+ <p>Ta réponse est :<p id='resultat'> </p></p>
+
+</p>
+
+
+<h4 id='sc'> </h4>
+<script>
+
+var score=0;
+
+function vrai(){
+    document.getElementById('demo').innerHTML='Bien.';
+    score++;
+    document.getElementById("btnV").disabled=true;
+    document.getElementById("btnF").disabled=true;
+    document.getElementById('sc').innerHTML= 'Ton score est de'+' '+score;
+}
+function faux(){
+    document.getElementById('demo').innerHTML='Dommage.';
+    document.getElementById("btnF").disabled=true;
+    document.getElementById("btnV").disabled=true;
+}
+
+
+
+function choix()
+{
+    const selecteur = document.getElementById("choix");
+    const monChoix=selecteur[selecteur.selectedIndex].value;
+    if (monChoix=='zh'){
+    document.getElementById("selectResult").innerHTML="Bien trouvé.";
+    score++
+    document.getElementById("choix").disabled=true;
+    document.getElementById('sc').innerHTML= 'Ton score est de'+' '+score;
+    }else{
+        document.getElementById("selectResult").innerHTML="Malheuresement non";
+        document.getElementById("choix").disabled=true;
+    }
+}
+
+
+
+function vf(){
+    var rep = document.getElementById("Id_Rep").value;
+    if(rep=='lala'){
+        document.getElementById('resultat').innerHTML= 'une bonne réponse ! Bravo';
+        score++
+        document.getElementById('sc').innerHTML= 'Ton score est de'+' '+score;
+        document.getElementById("Valider").disabled=true;
+    }else{
+        document.getElementById('resultat').innerHTML= 'mauvaise, désolé.'; 
+        document.getElementById("Valider").disabled=true;
+    }
+    
+}
+</script>
+</body>
+</html>
+
