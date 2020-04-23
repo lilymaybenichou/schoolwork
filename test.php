@@ -1,3 +1,4 @@
 <?php
-$arg1="hello world !"
-echo $arg1
+$arg1="hello world !";
+echo $arg1;
+?>
